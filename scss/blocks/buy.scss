@@ -1,0 +1,248 @@
+.buy {
+  min-height: 1496px;
+  padding-top: 75px;
+  border-top: 6px solid var(--blue);
+  border-left: 10px solid var(--blue);
+  border-right: 10px solid var(--blue);
+  position: relative;
+}
+
+.buy__container {
+  width: min(1280px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buy__title {
+  font-size: 56px;
+  text-align: center;
+  color: #000;
+}
+
+.buy__subtitle {
+  font-size: 34px;
+  text-align: center;
+  color: var(--blue);
+}
+
+.buy__candidates {
+  margin-top: 71px;
+  display: flex;
+  gap: 24px;
+  align-items: end;
+}
+
+.candidates__scale {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(
+    90deg,
+    rgba(51, 0, 255, 0.1) 38.5%,
+    rgba(228, 6, 6, 0.1) 77%
+  );
+
+  .scale__left {
+    width: 210px;
+    height: 100%;
+    padding-left: 13px;
+    display: flex;
+    align-items: center;
+    background-color: var(--blue);
+    font-size: 32px;
+    position: relative;
+
+    span:last-of-type {
+      position: absolute;
+      top: 0;
+      left: 0;
+      translate: 0 calc(-100% - 6px);
+      min-width: 124px;
+      height: 45px;
+      background-color: var(--blue);
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+
+  .scale__right {
+    width: 73px;
+    height: 50px;
+    padding-right: 13px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: var(--red);
+    font-size: 32px;
+    position: relative;
+
+    span:last-of-type {
+      position: absolute;
+      top: 0;
+      right: 0;
+      translate: 0 calc(-100% - 6px);
+      width: 130px;
+      height: 45px;
+      background-color: var(--red);
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+}
+
+.candidates__left,
+.candidates__right {
+  span {
+    height: 70px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-family: var(--second-family);
+    font-size: 38px;
+    position: relative;
+
+    &::before {
+      content: url("../public/img/buy/buy_stars.png");
+      position: absolute;
+      top: 6px;
+      left: 50%;
+      translate: -50% 0;
+    }
+  }
+}
+
+.candidates__left {
+  span {
+    background-color: var(--blue);
+  }
+}
+.candidates__right {
+  span {
+    background-color: red;
+  }
+}
+
+.buy__guide {
+  margin-top: 151px;
+
+  .buy__img {
+    position: absolute;
+    left: -7px;
+
+    a {
+      position: absolute;
+      bottom: 26px;
+      right: 25px;
+      width: 196px;
+      height: 66px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      background-color: var(--blue);
+      font-size: 24px;
+      line-height: 105%;
+      text-transform: uppercase;
+      transition: filter 100ms ease;
+
+      &:hover {
+        filter: brightness(0.8);
+      }
+      &:active {
+        filter: brightness(1);
+      }
+    }
+  }
+}
+
+.buy__text {
+  margin-left: 20px;
+  position: absolute;
+  left: 50%;
+}
+
+.buy__second-title {
+  height: 66px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+
+  span:first-of-type {
+    width: fit-content;
+    height: 100%;
+    padding-top: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    font-family: var(--second-family);
+    font-size: 44px;
+    line-height: 105%;
+    background-color: var(--blue);
+  }
+
+  span:last-of-type {
+    width: fit-content;
+    height: 100%;
+    padding-top: 6px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    font-family: var(--second-family);
+    font-size: 44px;
+    line-height: 105%;
+    background-color: var(--red);
+  }
+}
+
+.buy__steps {
+  max-width: 555px;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  text-transform: uppercase;
+  color: var(--blue);
+
+  .step__title {
+    font-size: 26px;
+    line-height: 105%;
+  }
+
+  a {
+    font-size: 22px;
+    opacity: 0.9;
+  }
+
+  span {
+    opacity: 0.4;
+    font-size: 22px;
+    line-height: 125%;
+  }
+}
+
+.buy__steps {
+  li {
+    padding-left: 85px;
+    position: relative;
+    &::before {
+      content: url("../public/img/buy/buy_mark.png");
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &:nth-child(2) {
+      a {
+        opacity: 0.4;
+      }
+      span {
+        opacity: 0.9;
+      }
+    }
+  }
+}

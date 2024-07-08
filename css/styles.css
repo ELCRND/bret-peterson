@@ -486,7 +486,7 @@ body {
 
 .roadmap {
   min-height: 759px;
-  padding-top: 700px;
+  padding-top: 70px;
   border-top: 6px solid var(--blue);
   border-left: 10px solid var(--blue);
   border-right: 10px solid var(--blue);
@@ -494,6 +494,9 @@ body {
 
 .roadmap__container {
   width: min(1398px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 
 .roadmap__title {
@@ -502,10 +505,402 @@ body {
 .roadmap__title span:first-of-type {
   font-family: var(--second-family);
   font-size: 90px;
+  position: relative;
+}
+.roadmap__title span:first-of-type::before {
+  content: "";
+  width: calc(100% + 16px);
+  height: 54px;
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  z-index: -1;
+  background-color: var(--red);
 }
 .roadmap__title span:last-of-type {
+  width: fit-content;
+  display: block;
   font-family: var(--second-family);
   font-size: 60px;
+  position: relative;
+  top: -26px;
+}
+.roadmap__title span:last-of-type::before {
+  content: "";
+  width: calc(100% + 16px);
+  height: 54px;
+  position: absolute;
+  top: 0;
+  left: -8px;
+  z-index: -1;
+  background-color: var(--blue);
+}
+
+.roadmap__indicators {
+  margin-top: 155px;
+  display: flex;
+}
+
+.indicators__process {
+  width: 588px;
+}
+
+.process__dates,
+.future__dates {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  line-height: 105%;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+}
+
+.process__dates {
+  height: 46px;
+  padding-left: 64px;
+  padding-right: 126px;
+  gap: 226px;
+  background-color: var(--blue);
+}
+
+.future__dates {
+  height: 38px;
+  padding-left: 109px;
+  padding-right: 50px;
+  gap: 180px;
+  margin-top: 4px;
+  background-color: var(--red);
+}
+
+.process__schedule {
+  margin-top: 4px;
+  display: flex;
+  gap: 114px;
+}
+
+.process__plan {
+  padding: 18px 35px 24px 51px;
+  background-color: var(--blue);
+  font-size: 20px;
+  line-height: 105%;
+}
+.process__plan ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.process__plan ul li {
+  position: relative;
+}
+.process__plan ul li::before {
+  content: url("../public/img/roadmap/roadmap_mark.png");
+  position: absolute;
+  top: -6px;
+  left: -30px;
+}
+
+.indicators__future {
+  width: 100%;
+}
+
+.future__schedule {
+  margin-top: 8px;
+  display: flex;
+  justify-content: end;
+  gap: 80px;
+}
+
+.future__plan {
+  height: fit-content;
+  padding: 18px 35px 24px 51px;
+  background-color: var(--red);
+  font-size: 20px;
+  line-height: 105%;
+}
+.future__plan ul {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.future__plan ul li {
+  position: relative;
+}
+.future__plan ul li::before {
+  content: url("../public/img/roadmap/roadmap_mark.png");
+  position: absolute;
+  top: -6px;
+  left: -30px;
+}
+
+.roadmap__legends {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 4px;
+  text-transform: uppercase;
+  text-align: right;
+}
+.roadmap__legends .legends__process {
+  padding-top: 12px;
+  font-family: var(--second-family);
+  font-size: 40px;
+  position: relative;
+}
+.roadmap__legends .legends__process::before {
+  content: "";
+  width: calc(100% + 16px);
+  height: 41px;
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  z-index: -1;
+  background-color: var(--blue);
+}
+.roadmap__legends .legend__future {
+  width: fit-content;
+  font-family: var(--second-family);
+  font-size: 40px;
+  position: relative;
+}
+.roadmap__legends .legend__future::before {
+  content: "";
+  width: calc(100% + 16px);
+  height: 41px;
+  position: absolute;
+  top: 0;
+  left: -8px;
+  z-index: -1;
+  background-color: var(--red);
+}
+
+.not-done::before {
+  opacity: 0.3;
+}
+
+.buy {
+  min-height: 1496px;
+  padding-top: 75px;
+  border-top: 6px solid var(--blue);
+  border-left: 10px solid var(--blue);
+  border-right: 10px solid var(--blue);
+  position: relative;
+}
+
+.buy__container {
+  width: min(1280px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buy__title {
+  font-size: 56px;
+  text-align: center;
+  color: #000;
+}
+
+.buy__subtitle {
+  font-size: 34px;
+  text-align: center;
+  color: var(--blue);
+}
+
+.buy__candidates {
+  margin-top: 71px;
+  display: flex;
+  gap: 24px;
+  align-items: end;
+}
+
+.candidates__scale {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 9px;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(90deg, rgba(51, 0, 255, 0.1) 38.5%, rgba(228, 6, 6, 0.1) 77%);
+}
+.candidates__scale .scale__left {
+  width: 210px;
+  height: 100%;
+  padding-left: 13px;
+  display: flex;
+  align-items: center;
+  background-color: var(--blue);
+  font-size: 32px;
+  position: relative;
+}
+.candidates__scale .scale__left span:last-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+  translate: 0 calc(-100% - 6px);
+  min-width: 124px;
+  height: 45px;
+  background-color: var(--blue);
+  font-size: 32px;
+  text-align: center;
+}
+.candidates__scale .scale__right {
+  width: 73px;
+  height: 50px;
+  padding-right: 13px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background-color: var(--red);
+  font-size: 32px;
+  position: relative;
+}
+.candidates__scale .scale__right span:last-of-type {
+  position: absolute;
+  top: 0;
+  right: 0;
+  translate: 0 calc(-100% - 6px);
+  width: 130px;
+  height: 45px;
+  background-color: var(--red);
+  font-size: 32px;
+  text-align: center;
+}
+
+.candidates__left span,
+.candidates__right span {
+  height: 70px;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-family: var(--second-family);
+  font-size: 38px;
+  position: relative;
+}
+.candidates__left span::before,
+.candidates__right span::before {
+  content: url("../public/img/buy/buy_stars.png");
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  translate: -50% 0;
+}
+
+.candidates__left span {
+  background-color: var(--blue);
+}
+
+.candidates__right span {
+  background-color: red;
+}
+
+.buy__guide {
+  margin-top: 151px;
+}
+.buy__guide .buy__img {
+  position: absolute;
+  left: -7px;
+}
+.buy__guide .buy__img a {
+  position: absolute;
+  bottom: 26px;
+  right: 25px;
+  width: 196px;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  background-color: var(--blue);
+  font-size: 24px;
+  line-height: 105%;
+  text-transform: uppercase;
+  transition: filter 100ms ease;
+}
+.buy__guide .buy__img a:hover {
+  filter: brightness(0.8);
+}
+.buy__guide .buy__img a:active {
+  filter: brightness(1);
+}
+
+.buy__text {
+  margin-left: 20px;
+  position: absolute;
+  left: 50%;
+}
+
+.buy__second-title {
+  height: 66px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+.buy__second-title span:first-of-type {
+  width: fit-content;
+  height: 100%;
+  padding-top: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  font-family: var(--second-family);
+  font-size: 44px;
+  line-height: 105%;
+  background-color: var(--blue);
+}
+.buy__second-title span:last-of-type {
+  width: fit-content;
+  height: 100%;
+  padding-top: 6px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  font-family: var(--second-family);
+  font-size: 44px;
+  line-height: 105%;
+  background-color: var(--red);
+}
+
+.buy__steps {
+  max-width: 555px;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.buy__steps .step__title {
+  font-size: 26px;
+  line-height: 105%;
+}
+.buy__steps a {
+  font-size: 22px;
+  opacity: 0.9;
+}
+.buy__steps span {
+  opacity: 0.4;
+  font-size: 22px;
+  line-height: 125%;
+}
+
+.buy__steps li {
+  padding-left: 85px;
+  position: relative;
+}
+.buy__steps li::before {
+  content: url("../public/img/buy/buy_mark.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.buy__steps li:nth-child(2) a {
+  opacity: 0.4;
+}
+.buy__steps li:nth-child(2) span {
+  opacity: 0.9;
 }
 
 /*# sourceMappingURL=styles.css.map */
