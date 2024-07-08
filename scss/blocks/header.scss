@@ -1,0 +1,51 @@
+.header {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  translate: -50% 0;
+  z-index: 10;
+}
+
+.header__container {
+  max-width: 1004px;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  background-color: var(--blue);
+  text-transform: uppercase;
+  line-height: 105%;
+  border: 3px solid #fff;
+}
+
+.header__logo {
+  min-width: 208px;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 3px solid #fff;
+
+  img {
+    display: block;
+  }
+}
+
+.navigation__list {
+  margin-left: 51px;
+  margin-right: 51px;
+  display: flex;
+  gap: 60px;
+  font-size: 20px;
+  text-wrap: nowrap;
+}
+
+.header__buy {
+  min-width: 208px;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-left: 3px solid #fff;
+  font-size: 24px;
+}

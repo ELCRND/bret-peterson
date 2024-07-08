@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Jockey+One&family=Jomhuria&family=Jomolhari&display=swap");
+
+:root {
+  --font-family: "Jockey One", sans-serif;
+  --second-family: "Jomhuria", sans-serif;
+  --third-family: "Jomolhari", sans-serif;
+  --red: #e40606;
+  --blue: #30f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #fff;
+  color: #fff;
+}
+
+.scroll-off {
+  max-height: 100vh;
+  overflow: hidden;
+}
