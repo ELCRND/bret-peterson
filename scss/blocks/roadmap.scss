@@ -129,6 +129,18 @@
   @media screen and (max-width: 1420px) {
     justify-content: center;
   }
+
+  span {
+    position: relative;
+
+    &::before {
+      content: url("../public/img/roadmap/roadmap_strokes.png");
+      position: absolute;
+      top: 0;
+      left: 50%;
+      translate: -50% 10%;
+    }
+  }
 }
 
 .process__dates {
