@@ -247,6 +247,12 @@ body {
     display: none;
   }
 }
+.navigation__list .navigation__link {
+  transition: 150ms ease;
+}
+.navigation__list .navigation__link:hover {
+  filter: brightness(0.8);
+}
 
 .header__buy {
   min-width: 208px;
@@ -256,8 +262,14 @@ body {
   align-items: center;
   gap: 6px;
   border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
   font-size: 24px;
   line-height: 105%;
+  transition: filter 150ms ease;
+  background-color: var(--blue);
+}
+.header__buy:hover {
+  filter: brightness(0.8);
 }
 @media screen and (max-width: 1020px) {
   .header__buy {
@@ -297,6 +309,12 @@ body {
   position: relative;
   top: 50%;
   translate: 0 -25%;
+}
+.header__menu ol a {
+  transition: 150ms ease;
+}
+.header__menu ol a:hover {
+  filter: brightness(0.8);
 }
 
 .header__menu.visible {
@@ -672,6 +690,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 4px;
   background-color: var(--blue);
   transition: background-color 100ms ease;
   position: relative;
@@ -685,7 +704,7 @@ body {
   }
 }
 .about__buy:hover {
-  background-color: #2301ac;
+  background-color: #2412c7;
 }
 .about__buy:active {
   translate: 7px 7px;
@@ -755,7 +774,7 @@ body {
   transition: filter 100ms ease;
 }
 .about__code .code__copy:hover {
-  filter: brightness(0.7);
+  filter: brightness(0.8);
 }
 .about__code .code__copy:active {
   filter: brightness(1);

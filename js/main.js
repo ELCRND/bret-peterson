@@ -1,6 +1,5 @@
 const menuBtn = document.querySelector(".header__menu-btn");
 const menu = document.querySelector(".header__menu");
-
 const aboutKey = document.querySelector("#about-key");
 const footerKey = document.querySelector("#footer-key");
 const tooltip = document.querySelector(".tooltip");

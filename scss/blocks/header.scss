@@ -71,6 +71,13 @@
   @media screen and (max-width: 780px) {
     display: none;
   }
+
+  .navigation__link {
+    transition: 150ms ease;
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
 }
 
 .header__buy {
@@ -81,8 +88,14 @@
   align-items: center;
   gap: 6px;
   border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
   font-size: 24px;
   line-height: 105%;
+  transition: filter 150ms ease;
+  background-color: var(--blue);
+  &:hover {
+    filter: brightness(0.8);
+  }
 
   @media screen and (max-width: 1020px) {
     min-width: 169px;
@@ -119,6 +132,13 @@
     position: relative;
     top: 50%;
     translate: 0 -25%;
+
+    a {
+      transition: 150ms ease;
+      &:hover {
+        filter: brightness(0.8);
+      }
+    }
   }
 }
 

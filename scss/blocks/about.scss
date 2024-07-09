@@ -142,6 +142,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 4px;
   background-color: var(--blue);
   transition: background-color 100ms ease;
   position: relative;
@@ -154,7 +155,7 @@
   }
 
   &:hover {
-    background-color: #2301ac;
+    background-color: #2412c7;
   }
 
   &:active {
@@ -227,7 +228,7 @@
     text-transform: uppercase;
     transition: filter 100ms ease;
     &:hover {
-      filter: brightness(0.7);
+      filter: brightness(0.8);
     }
     &:active {
       filter: brightness(1);
