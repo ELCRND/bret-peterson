@@ -2,8 +2,13 @@
   min-height: 1059px;
   background-image: url("../public/img/hero/hero_bg.jpg");
   background-size: contain;
-  background-position: center center;
+  background-position: top center;
+  background-repeat: no-repeat;
   position: relative;
+
+  @media screen and (max-width: 1919px) {
+    background-size: cover;
+  }
 }
 
 .hero__title {
@@ -15,6 +20,14 @@
   font-family: var(--second-family);
   font-size: 90px;
   text-transform: uppercase;
+  text-wrap: nowrap;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 70px;
+  }
+  @media screen and (max-width: 780px) {
+    font-size: 45px;
+  }
 
   &::before {
     content: "";
@@ -34,15 +47,27 @@
   padding: 16px 32px;
   position: absolute;
   bottom: 0;
-  z-index: 12;
+  z-index: 2;
   left: 50%;
-  translate: -50% -15px;
+  translate: -50% -20px;
   display: flex;
   flex-direction: column;
   border-top: 3px solid #fff;
   border-left: 3px solid #fff;
   border-right: 3px solid #fff;
   background-color: var(--blue);
+
+  @media screen and (max-width: 1919px) {
+    translate: -50% -13px;
+  }
+  @media screen and (max-width: 1200px) {
+    min-width: fit-content;
+    padding: 14px 22px;
+  }
+  @media screen and (max-width: 780px) {
+    min-width: fit-content;
+    padding: 12px 16px;
+  }
 
   &::after {
     content: "";
@@ -57,17 +82,81 @@
   span:first-of-type {
     font-family: var(--third-family);
     font-size: 15px;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 12px;
+    }
+    @media screen and (max-width: 1200px) {
+      font-size: 10px;
+    }
   }
   span:last-of-type {
     font-family: var(--second-family);
     font-size: 90px;
     line-height: 56px;
+    text-wrap: nowrap;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 60px;
+    }
+    @media screen and (max-width: 1200px) {
+      font-size: 50px;
+    }
 
     &::before {
       content: url("../public/img/hero/hero_stars.png");
       position: absolute;
       top: 0;
       right: 40px;
+
+      @media screen and (max-width: 1200px) {
+        right: 0;
+        scale: 0.8;
+      }
+      @media screen and (max-width: 780px) {
+        right: -4px;
+        scale: 0.6;
+      }
+    }
+  }
+}
+
+.hero__socials {
+  height: 40px;
+  display: flex;
+  gap: 4px;
+  position: absolute;
+  bottom: 24px;
+  right: 25px;
+
+  @media screen and (max-width: 1200px) {
+    bottom: auto;
+    top: 90px;
+    right: 30px;
+  }
+
+  a {
+    width: 42px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #fff;
+    background-color: var(--blue);
+
+    &:hover {
+      svg {
+        transition: filter 150ms ease;
+        filter: brightness(0.8);
+      }
+    }
+
+    &:first-of-type {
+      width: 100px;
+
+      svg {
+        fill: #fff;
+      }
     }
   }
 }
