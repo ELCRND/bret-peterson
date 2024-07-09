@@ -710,14 +710,14 @@ body {
   border-right: 7px solid #000;
   position: absolute;
   bottom: 0;
-  left: -14px;
+  left: -13px;
 }
 .about__buy .buy-shadow::after {
   content: "";
   border: 7px solid transparent;
   border-bottom: 7px solid #000;
   position: absolute;
-  top: -14px;
+  top: -13px;
   right: 0;
 }
 
@@ -905,8 +905,7 @@ body {
 }
 @media screen and (max-width: 440px) {
   .tokenomics__total {
-    left: 20px;
-    translate: 0 0;
+    translate: -60% 0;
   }
 }
 .tokenomics__total span:first-of-type {
@@ -929,10 +928,11 @@ body {
   font-size: 44px;
   line-height: 105%;
   position: relative;
+  text-wrap: nowrap;
 }
 @media screen and (max-width: 780px) {
   .tokenomics__total span:last-of-type {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 .tokenomics__total span:last-of-type::before {
@@ -945,14 +945,20 @@ body {
 @media screen and (max-width: 780px) {
   .tokenomics__total span:last-of-type::before {
     scale: 0.8;
+    left: -60px;
   }
 }
 .tokenomics__total span:last-of-type::after {
   content: url("../public/img/tokenomics/tokenomics_total_mark.png");
   position: absolute;
   top: -4px;
-  right: -100px;
+  right: -80px;
   mix-blend-mode: lighten;
+}
+@media screen and (max-width: 780px) {
+  .tokenomics__total span:last-of-type::after {
+    scale: 0.8;
+  }
 }
 
 .roadmap {

@@ -124,8 +124,7 @@
     padding-left: 0;
   }
   @media screen and (max-width: 440px) {
-    left: 20px;
-    translate: 0 0;
+    translate: -60% 0;
   }
 
   span:first-of-type {
@@ -148,9 +147,10 @@
     font-size: 44px;
     line-height: 105%;
     position: relative;
+    text-wrap: nowrap;
 
     @media screen and (max-width: 780px) {
-      font-size: 40px;
+      font-size: 36px;
     }
 
     &::before {
@@ -161,6 +161,7 @@
       z-index: -1;
       @media screen and (max-width: 780px) {
         scale: 0.8;
+        left: -60px;
       }
     }
 
@@ -168,8 +169,11 @@
       content: url("../public/img/tokenomics/tokenomics_total_mark.png");
       position: absolute;
       top: -4px;
-      right: -100px;
+      right: -80px;
       mix-blend-mode: lighten;
+      @media screen and (max-width: 780px) {
+        scale: 0.8;
+      }
     }
   }
 }
